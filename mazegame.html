@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <script type="text/javascript">
+
+        function makeChange(){
+
+            var hey = document.getElementById("due").value;
+            var tendered = document.getElementById("tendered").value;
+            var x = tendered - hey;
+
+                var twenties=0;
+                while(x >= 20) {
+                    x = x - 20;
+                    twenties += 1;
+                }
+                    console.log("Give this many twenties:" + twenties);
+
+                var tens=0;
+                while(x >= 10) {
+                    x = x - 10;
+                    tens += 1;
+                }
+                    console.log("Give this many tens:" + tens);
+
+                var fives=0;
+                while(x >= 5) {
+                    x = x - 5;
+                    fives += 1;
+                }
+                    console.log("Give this many fives:" + fives);
+
+                var ones=0;
+                while(x >=1) {
+                    x = x - 1;
+                    ones += 1;
+                }
+                    console.log("Give this many ones:" + ones);
+
+                var quarters=0;
+                while(x >= 0.25) {
+                    x = x - 0.25;
+                    quarters += 1;
+                }
+                    console.log("Give this many quarters:" + quarters);
+
+                var dimes=0;
+                while(x >= 0.10) {
+                    x = x - 0.10;
+                    dimes += 1;
+
+                    console.log("Give this many dimes:" + dimes);
+                }
+
+                var nickels=0;
+                while(x >= 0.05) {
+                    x = x - 0.05;
+                    nickles += 1;
+                }
+                    console.log("Give this many nickels:" + nickels);
+
+                var pennies=0;
+                while(x >= .01) {
+                    x = x - .01;
+                    pennies += 1;
+                }
+                    console.log("Give this many pennies:" + pennies);
+
+            //This code below changes the html to reflect the proper change.
+            document.getElementById("twenties").innerHTML = twenties.toString();
+            document.getElementById("tens").innerHTML = tens.toString();
+            document.getElementById("fives").innerHTML = fives.toString();
+            document.getElementById("ones").innerHTML = ones.toString();
+            document.getElementById("quarters").innerHTML = quarters.toString();
+            document.getElementById("dimes").innerHTML = dimes.toString();
+            document.getElementById("nickels").innerHTML = nickels.toString();
+            document.getElementById("pennies").innerHTML = pennies.toString();
+        }
+
+    </script>
+
+    </head>
+
+
+<body>
+<table><tr><td>
+    <tr><td>Enter the amount due:</td><td><input id ="due" length 30> </td></tr>
+    <tr><td>Enter the amount tendered:</td><td><input id ="tendered" length 30></td></tr>
+    <tr><td><button id="changer" onclick="makeChange()">Calculate Change</button></td></tr>
+</table>
+<p>
+<p>
+<table id = "changeTable">
+    <tr><td> $20bill: </td><td id ="twenties"></td></tr>
+    <tr><td> $10bill: </td><td id = "tens"></td></tr>
+    <tr><td> $5bill: </td><td id = "fives"></td></tr>
+    <tr><td> $1bill: </td><td id="ones"></td></tr>
+    <tr><td> quarters: </td><td id="quarters"></td></tr>
+    <tr><td> dimes: </td><td id ="dimes"></td></tr>
+    <tr><td> nickels: </td><td id ="nickels"></td></tr>
+    <tr><td> pennies: </td><td id="pennies"></td></tr>
+</table>
+</body>
+</html>
